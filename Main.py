@@ -5,12 +5,18 @@ import pandas as pd
 with open('D:/REV Projects/Project_0/DataSets/customers.json ', 'r') as file:
     customer_data = json.load(file)
 customers_df = pd.DataFrame(customer_data)
-print("Customers_Data:")
-print(customers_df)
+# print("Customers_Data:")
+# print(customers_df)
 
 # Reading Transaction Logs
 with open('D:/REV Projects/Project_0/DataSets/transaction_logs.json', 'r') as file:
     transaction_data = json.load(file)
 transactions_df = pd.DataFrame(transaction_data)
-print("\nTransaction_Logs:")
-print(transactions_df)
+# print("\nTransaction_Logs:")
+# print(transactions_df)
+
+print("Customer Data Information:")
+print(customers_df.info())
+
+print("Customer Data Description:")
+print(customers_df.describe(include='all'))
