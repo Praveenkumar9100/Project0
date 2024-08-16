@@ -11,3 +11,6 @@
 
 Step3:-
   knowing the missing values in the both tables
+
+Step4:-
+  Analysis of the data 
