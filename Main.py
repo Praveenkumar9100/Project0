@@ -15,8 +15,24 @@ transactions_df = pd.DataFrame(transaction_data)
 # print("\nTransaction_Logs:")
 # print(transactions_df)
 
-print("Customer Data Information:")
-print(customers_df.info())
 
-print("Customer Data Description:")
-print(customers_df.describe(include='all'))
+# ----knowing the information of both tables and decription-----
+# print("Customer Data Information:")
+# print(customers_df.info())
+
+# print("Customer Data Description:")
+# print(customers_df.describe(include='all'))
+
+# print("transaction_logs Data Information:")
+# print(transactions_df.info())
+
+# print("transaction data Description:")
+# print(transactions_df.describe(include='all'))
+
+# knowing missing values in customer data
+print("Missing Values in Customer Data:")
+print(customers_df.isnull().sum())
+
+
+print("Missing Values in transaction Data:")
+print(transactions_df.isnull().sum())
