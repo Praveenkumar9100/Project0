@@ -108,3 +108,26 @@ rows=cursor.fetchmany(size=4)
 res=cursor.fetchall()
 for _ in res:
     print(_)
+
+
+cursor=db.cursor()     #cursor used for running the sql queries.
+cursor.execute("select *from products limit 5")
+rows=cursor.fetchmany(size=4)
+res=cursor.fetchall()
+for _ in res:
+    print(_)
+
+cursor=db.cursor()     #cursor used for running the sql queries.
+cursor.execute("select *from transactions limit 5")
+rows=cursor.fetchmany(size=4)
+res=cursor.fetchall()
+for _ in res:
+    print(_)
+
+
+cursor=db.cursor()     #cursor used for running the sql queries.
+cursor.execute("select *from ecommerce_websites limit 5")
+rows=cursor.fetchmany(size=4)
+res=cursor.fetchall()
+for _ in res:
+    print(_)
