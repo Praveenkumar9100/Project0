@@ -30,9 +30,16 @@ transactions_df = pd.DataFrame(transaction_data)
 # print(transactions_df.describe(include='all'))
 
 # knowing missing values in customer data
-print("Missing Values in Customer Data:")
-print(customers_df.isnull().sum())
+# print("Missing Values in Customer Data:")
+# print(customers_df.isnull().sum())
 
 
-print("Missing Values in transaction Data:")
-print(transactions_df.isnull().sum())
+# print("Missing Values in transaction Data:")
+# print(transactions_df.isnull().sum())
+
+# Merging of the both tables
+
+merged_df = pd.merge(transactions_df, customers_df, on='customer_id', how='inner')
+print("Merged DataFrame Info:")
+print(merged_df.info())
+
