@@ -1,0 +1,39 @@
+
+-- Customers Table
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(255),
+    country VARCHAR(255),
+    city VARCHAR(255)
+);
+
+-- Products Table
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(255),
+    product_category VARCHAR(255)
+);
+
+-- Ecommerce Websites Table
+CREATE TABLE ecommerce_websites (
+    website_id INT PRIMARY KEY,
+    website_name VARCHAR(255)
+);
+
+-- Transactions Table
+CREATE TABLE transactions (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    product_id INT,
+    website_id INT,
+    qty INT,
+    price DECIMAL(10, 2),
+    datetime DATETIME,
+    payment_type VARCHAR(50),
+    payment_txn_id VARCHAR(255),
+    payment_txn_success BOOLEAN,
+    failure_reason TEXT,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (product_id) REFERENCES products(product_id),
+    FOREIGN KEY (website_id) REFERENCES ecommerce_websites(website_id)
+);
